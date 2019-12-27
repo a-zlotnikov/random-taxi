@@ -5,24 +5,104 @@
 }
 
 
-img.rot {
+.rot {
     animation: 2s linear 0s normal none infinite running rot;
     -webkit-animation: 2s linear 0s normal none infinite running rot;
     width: 300px;
+    z-index: 1000;
 }
 @keyframes rot {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 }
 @-webkit-keyframes rot {
     0% {
-        transform: rotate(0deg);
-    }
-    100% {
         transform: rotate(360deg);
     }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#buzz,
+#buzz {
+    -webkit-animation-name: buzz;
+    animation-name: buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes buzz {
+    50% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+@keyframes buzz {
+    50% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+#pulse,
+#pulse {
+    -webkit-animation: pulses 3s infinite ease-in-out;
+    -o-animation: pulses 3s infinite ease-in-out;
+    -ms-animation: pulses 3s infinite ease-in-out;
+    -moz-animation: pulses 3s infinite ease-in-out;
+    animation: pulses 3s infinite ease-in-out;
+}
+@-webkit-keyframes pulses {
+    0% { -webkit-transform: scale(0.9); opacity: 0.7; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.9); opacity: 0.7; }
+}
+
+@keyframes pulses {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+.scroll {
+    background-color: lightyellow;
+    font-family: 'Kelly Slab', cursive;
+    font-size: 40px;
+}
+
+@-webkit-keyframes pulsate {
+    50% { color: black; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+@keyframes pulsate {
+    50% { color: black; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+#blink7 {
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.ya-taxi-widget {
+    height: 100px ;
+    width: 250px ;
 }

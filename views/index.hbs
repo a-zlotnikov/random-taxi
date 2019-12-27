@@ -1,8 +1,19 @@
 <div class="logo">
     <img class="rot" src="/img/button.png">
-    <img src="/img/text.png">
+    <img src="/img/text.png" id="pulse">
+    <div class="ya-taxi-widget"
+         id="buzz"
+         style="margin-top: 100px; width: 300px; height: 150px"
+         data-clid="CLID"
+         data-apikey="APIKEY"
+         data-point-b="{{a}},{{b}}"
+         data-use-location="<true>"
+         data-custom-layout="true"
+         data-link="true"
+         data-proxy-url="https://3.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&amp;start-lon={start-lon}&amp;end-lat={end-lat}&amp;end-lon={end-lon}&amp;ref=widget&amp;appmetrica_tracking_id=1178268795219780156&amp;utm_source=widget"
+    ><a href="#" data-link="true"><img src="/img/get copy.png"></a></div>
 </div>
+<marquee class="scroll" behavior="scroll" direction="right" id="blink7">Инновационный нано-сервис по вызову такси</marquee>
 <div id="map" style="width: 100%; height: 700px"></div>
-
 <script src="script.js"></script>
 <script src="//yastatic.net/taxi-widget/ya-taxi-widget.js"></script>
